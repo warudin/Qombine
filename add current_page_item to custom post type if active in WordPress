@@ -1,5 +1,5 @@
-add_filter( 'nav_menu_css_class', 'thd_menu_classes_product', 10, 2 );
-function thd_menu_classes_product( $classes , $item ){
+add_filter( 'nav_menu_css_class', 'thd_menu_classes', 10, 2 );
+function thd_menu_classes( $classes , $item ){
   if ( get_post_type() == 'product' ) {
     // remove unwanted if found
     $classes = str_replace( 'current_page_parent', '', $classes );
